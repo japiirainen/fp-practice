@@ -29,7 +29,7 @@ console.log(result)
 const result2 = dotChained('  64 ')
 console.log(result2)
 
-
+//====================================================================>>>>>>>>>>>>>>
 
 //dot chain this
 
@@ -53,6 +53,8 @@ console.log(res)
 const res2 = refactored([1, 4, 50])
 console.log(res2)
 
+//====================================================================>>>>>>>>>>>>>>
+
 
 const moneyToFloat = str => 
     Box(str)
@@ -61,6 +63,8 @@ const moneyToFloat = str =>
 
 const number = moneyToFloat('8.00$')
 console.log(number);
+
+//====================================================================>>>>>>>>>>>>>>
 
 
 const percentToFloat = str => 
@@ -71,6 +75,8 @@ const percentToFloat = str =>
 
 const notPercent = percentToFloat('20%')
 console.log(notPercent)    
+
+//====================================================================>>>>>>>>>>>>>>
 
 
 const applyDiscount = (price, discount) => 
