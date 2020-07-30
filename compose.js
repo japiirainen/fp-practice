@@ -17,7 +17,7 @@ const lorem = _.compose(concat(' LOL'), log('almost there:'), toUpper, log('next
 console.log(lorem('Lorem Ipsum'))
 
 
-//ex1
+//exercises
 
 const CARS = [
     {name: "Ferrari FF", horsepower: 660, dollar_value: 700000, in_stock: true},
