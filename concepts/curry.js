@@ -1,13 +1,11 @@
-import R from 'ramda'
+const R = require('ramda')
 const _ = R
 
 const add = (x, y) => x + y
 
 const multiply = (x, y) => x * y
 
-const toPair = f => 
-    ([x, y]) => f(x, y)
-
+const toPair = (f) => ([x, y]) => f(x, y)
 
 const result = toPair(add)([2, 5])
 
@@ -15,12 +13,8 @@ const multiplied = toPair(multiply)([5, 10])
 
 console.log(multiplied)
 console.log(result)
- 
 
-
-const simpleCurry = f =>
-    x => y => f(x, y)
-
+const simpleCurry = (f) => (x) => (y) => f(x, y)
 
 const curriedAdd = simpleCurry(add)
 
@@ -40,11 +34,11 @@ const getOdds = customFilter(isOdd)
 
 console.log(getOdds([1, 2, 3, 4, 5, 6, 7]))
 
-const replace = _.curry((regex, replacement, str) => 
+const replace = _.curry((regex, replacement, str) =>
     str.replace(regex, replacement)
 )
 
-const replaceVowels = replace(/[AEIOU]/ig, '!')
+const replaceVowels = replace(/[AEIOU]/gi, '!')
 
 console.log(replaceVowels('Hello World'))
 
@@ -59,7 +53,6 @@ const splitMany = _.map(split)
 
 console.log(splitMany(listOfSentences))
 
-const filterQs = _.filter(_.test(/q/ig))
+const filterQs = _.filter(_.test(/q/gi))
 
 console.log(filterQs(['quarry', 'lol', 'quake', 'lol', 'quick']))
-
