@@ -1,6 +1,4 @@
 const { List } = require('immutable-ext')
-const { Either } = require('../../lib/types')
-const { Left, Right } = Either
 
 const Success = (x) => ({
     isFail: false,
@@ -36,7 +34,7 @@ const validate = (spec, obj) =>
     )
 
 const validations = { name: isPresent, email: isPresent.concat(isEmail) }
-const obj = { name: 'Joona', email: 'joona.piirainengmail.com' }
+const obj = { name: 'Joona', email: 'joona.piirainen@gmail.com' }
 
 const res = validate(validations, obj)
 
