@@ -12,14 +12,7 @@ const shout = customCompose(exclaim, toUpper)
 
 console.log(shout('Hello World'))
 
-const lorem = _.compose(
-    concat(' LOL'),
-    log('almost there:'),
-    toUpper,
-    log('next:'),
-    exclaim,
-    log('start:')
-)
+const lorem = _.compose(concat(' LOL'), toUpper, exclaim)
 
 console.log(lorem('Lorem Ipsum'))
 

@@ -38,4 +38,5 @@ const reducer = Reducer(login).concat(Reducer(setPrefs))
 
 const state = { loggedIn: false, prefs: {} }
 const payload = { email: 'admin', password: 123, prefs: { bgColor: '#000' } }
+
 console.log(reducer.run(state, payload))
