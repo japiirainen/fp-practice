@@ -5,7 +5,7 @@ const add = (x, y) => x + y
 
 const multiply = (x, y) => x * y
 
-const toPair = (f) => ([x, y]) => f(x, y)
+const toPair = f => ([x, y]) => f(x, y)
 
 const result = toPair(add)([2, 5])
 
@@ -14,7 +14,7 @@ const multiplied = toPair(multiply)([5, 10])
 console.log(multiplied)
 console.log(result)
 
-const simpleCurry = (f) => (x) => (y) => f(x, y)
+const simpleCurry = f => x => y => f(x, y)
 
 const curriedAdd = simpleCurry(add)
 
@@ -44,7 +44,7 @@ console.log(replaceVowels('Hello World'))
 
 //ex1
 
-const split = _.curry((str) => str.split(' '))
+const split = _.curry(str => str.split(' '))
 
 console.log(split('hello world'))
 

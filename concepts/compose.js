@@ -56,7 +56,7 @@ const CARS = [
 const nameOfFirstCar = _.compose(_.prop('name'), _.head)
 
 console.log(nameOfFirstCar(CARS))
-
+console.log(_.prop('name', CARS[0]))
 //get average price
 const getAverage = (xs) => _.reduce(_.add, 0, xs) / xs.length
 
@@ -83,3 +83,17 @@ const fastestCar = _.compose(
 )
 
 console.log(fastestCar(CARS))
+
+const translateItem = (x) => x + 'lol'
+const getLabel = (x) => _.prop('horsepower', x)
+
+const pretyPrint = (x) => ({
+    name: x.name,
+    horsepower: x.horsepower,
+    color: x.color,
+})
+const translate = _.map(_.compose(translateItem, getLabel), CARS)
+
+//_.map(_.compose(translateItem, getLabel))
+
+console.log(translate)
