@@ -1,12 +1,12 @@
 const R = require('ramda')
 const _ = R
 
-const toUpper = (str) => str.toUpperCase()
+const toUpper = str => str.toUpperCase()
 const concat = _.curry((y, x) => x + y)
-const exclaim = (str) => str + '!'
+const exclaim = str => str + '!'
 const log = _.curry((tag, x) => (console.log(tag, x), x))
 
-const customCompose = (f, g) => (x) => f(g(x))
+const customCompose = (f, g) => x => f(g(x))
 
 const shout = customCompose(exclaim, toUpper)
 
@@ -58,7 +58,7 @@ const nameOfFirstCar = _.compose(_.prop('name'), _.head)
 console.log(nameOfFirstCar(CARS))
 console.log(_.prop('name', CARS[0]))
 //get average price
-const getAverage = (xs) => _.reduce(_.add, 0, xs) / xs.length
+const getAverage = xs => _.reduce(_.add, 0, xs) / xs.length
 
 const averageDollarValue = _.compose(getAverage, _.map(_.prop('dollar_value')))
 
@@ -74,7 +74,7 @@ const sanitizeNames = _.map(_.compose(_.toLower, _underscore, _.prop('name')))
 console.log(sanitizeNames(CARS))
 
 //get fastest car
-const prettyPrint = (x) => `${x.name} is the fastest 🏎!`
+const prettyPrint = x => `${x.name} is the fastest 🏎!`
 
 const fastestCar = _.compose(
     prettyPrint,
@@ -84,10 +84,10 @@ const fastestCar = _.compose(
 
 console.log(fastestCar(CARS))
 
-const translateItem = (x) => x + 'lol'
-const getLabel = (x) => _.prop('horsepower', x)
+const translateItem = x => x + 'lol'
+const getLabel = x => _.prop('horsepower', x)
 
-const pretyPrint = (x) => ({
+const pretyPrint = x => ({
     name: x.name,
     horsepower: x.horsepower,
     color: x.color,
@@ -96,4 +96,6 @@ const translate = _.map(_.compose(translateItem, getLabel), CARS)
 
 //_.map(_.compose(translateItem, getLabel))
 
-console.log(translate)
+console.log(translate)` jee = function add(a, b) {
+    return a + b
+}`
