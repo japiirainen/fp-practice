@@ -39,3 +39,5 @@ const array = [
 const findPackage = (arr, id) => arr.find(x => x.id === id)
 
 console.log(findPackage(array, 1))
+
+const arr = [1, 2, 3, 4, 5, 6]
