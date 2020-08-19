@@ -15,20 +15,34 @@ class LinkedList {
     }
   }
 
-  remove(value) {}
+  remove(value) {
+    let currNode = this.read
+  }
 
   removeTail() {
     let currNode = this.head
     while (currNode.next !== this.tail) {
       currNode = currNode.next
     }
+    currNode.next = null
     this.tail = currNode
-    this.tail.next = null
   }
 
-  contains() {}
+  contains(value) {
+    let currNode = this.head
+    while (currNode.value !== value) {
+      currNode = currNode.next
+    }
+    return currNode.value === value
+  }
 
-  isTail() {}
+  isTail(value) {
+    return value === this.tail.value
+  }
+
+  isHead(value) {
+    return value === this.head.value
+  }
 }
 
 const list = new LinkedList()
