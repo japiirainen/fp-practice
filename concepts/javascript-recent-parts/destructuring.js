@@ -14,3 +14,30 @@ function data3() {
 }
 
 var [first, [second, third] = [], fourth] = data3()
+
+const array = [
+  {
+    id: 1,
+    name: 'joona',
+    desc: 'some text',
+    deps: [],
+  },
+  {
+    id: 2,
+    name: 'joona',
+    desc: 'some text',
+    deps: [],
+  },
+  {
+    id: 3,
+    name: 'joona',
+    desc: 'some text',
+    deps: [],
+  },
+]
+
+const findPackage = (arr, id) => arr.find(x => x.id === id)
+
+console.log(findPackage(array, 1))
+
+const arr = [1, 2, 3, 4, 5, 6]
