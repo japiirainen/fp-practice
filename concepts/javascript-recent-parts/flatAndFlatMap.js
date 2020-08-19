@@ -11,7 +11,7 @@ const res = [1, 2, 3, 4, 5, 6].flatMap(function doubleEvens(val) {
   }
 })
 
-const res2 = [1, 2, 3, 4, 5, 6].flatMap(v => (v % 2 === 0 ? [v, v * 2] : []))
+const res2 = [1, 2, 3, 4, 5, 6].flatMap(v => (v % 2 === 0 ? v * 2 : []))
 
 console.log(res)
 console.log(res2)

@@ -1,4 +1,5 @@
-var msg = 'Hello World'
+var msg = 'Hello World lol word {{ package }} words'
+console.log(msg.match(/()/))
 //look ahead
 console.log(msg.match(/(l.)/g))
 console.log(msg.match(/(l.)$/g))
@@ -8,6 +9,18 @@ console.log(msg.match(/(l.)(?!o)/g))
 //look behind
 console.log(msg.match(/(?<=e)(l.)/g))
 console.log(msg.match(/(?<!e)(l.)/g))
+
+const req = /\{{\s*([a-z]+?)\s*\}}/g
+const re = /\{{\s*([a-z]+?)\s*\}}/
+
+const lause = '{{ package }} lol {{ pilalla }} <h1></h1> {{ kaikki }}'
+
+console.log(lause.match(req))
+const pakg = lause.match(req)[1]
+const pilalla = lause.match(req)[2]
+console.log(pakg.match(re)[1])
+console.log(pakg)
+console.log(pilalla)
 
 //exercise
 
