@@ -44,3 +44,7 @@ console.log(table._storage)
 console.log(table.retrieve('a'))
 
 // _storage: [ 0, 0, 0, [['a', 1], ['b', 2]], 0, 0, 0 ]
+
+const str = 'dpkg  | install-info'
+
+console.log(str.split(' | '))
