@@ -13,6 +13,7 @@
     "immutable-ext": "^1.1.5",
     "lodash": "^4.17.19",
     "ramda": "^0.27.1",
-    "rxjs": "^6.6.3"
+    "rxjs": "^6.6.3",
+    "transducers.js": "^0.3.2"
   }
 }
