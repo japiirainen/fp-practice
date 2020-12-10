@@ -59,6 +59,11 @@ sanctuary-type-identifiers@1.0.0, sanctuary-type-identifiers@1.0.x:
   resolved "https://registry.yarnpkg.com/sanctuary-type-identifiers/-/sanctuary-type-identifiers-1.0.0.tgz#e8f359f006cb5e624cfb8464603fc114608bde9f"
   integrity sha1-6PNZ8AbLXmJM+4RkYD/BFGCL3p8=
 
+transducers.js@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/transducers.js/-/transducers.js-0.3.2.tgz#78902ef755e0606cd2fdd1633912f1093c8a5432"
+  integrity sha1-eJAu91XgYGzS/dFjORLxCTyKVDI=
+
 tslib@^1.9.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
