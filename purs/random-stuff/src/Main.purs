@@ -1,17 +1,10 @@
 module Main where
 
-import Data.List
+import Http.CustomStack
+import Prelude
 import Data.Foldable (sum)
 import Effect (Effect)
-import Effect.Console (log)
-import Prelude (Unit, ($), (<<<), (==), mod, show)
-import EffectPrograms.ReaderT (helloWorldProgramReaderT, runAppM)
-import EffectPrograms.RunExample (helloWorldProgramRun, runProgram)
+import HTTPure (ServerM)
+import React.ReactBasic.Hooks as ReactApp
 
-myFunc :: List Int -> Int
-myFunc = sum <<< filter (\x -> x `mod` 2 == 0)
-
-main :: Effect Unit
-main = do
-  --runAppM helloWorldProgramReaderT
-  runProgram helloWorldProgramRun
+main = ReactApp.main

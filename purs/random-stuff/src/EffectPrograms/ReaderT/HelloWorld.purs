@@ -1,4 +1,4 @@
-module EffectPrograms.ReaderT where
+module EffectPrograms.ReaderT.HelloWorld where
 
 import Prelude
 import Control.Monad.Reader.Trans (ReaderT, runReaderT)
