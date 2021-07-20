@@ -1,10 +1,13 @@
 module Main where
 
-import Http.CustomStack
-import Prelude
-import Data.Foldable (sum)
+import Data.Function (($))
+import Data.Unit (Unit)
 import Effect (Effect)
-import HTTPure (ServerM)
-import React.ReactBasic.Hooks as ReactApp
+import Files (Filepath(..), copyProgram, runAppM)
 
-main = ReactApp.main
+main :: Effect Unit
+main = runAppM $ copyProgram source dest
+  where
+  source = Filepath "spago.dhall"
+
+  dest = Filepath "copy-spago.dhall"
