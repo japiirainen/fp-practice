@@ -1,10 +1,11 @@
 module Main where
 
-import Data.Tuple
+import Data.Tuple (Tuple(..))
 import Prelude
+import Data.Array (range)
 import Data.Foldable (traverse_)
-import Data.Lens (Lens', _1, _2, lens', over, view)
-import Data.Lens.At (class At, at)
+import Data.Lens (Lens', Traversal', _2, _Just, over, traversed, view)
+import Data.Lens.At (at)
 import Data.Lens.Record (prop)
 import Data.Map (Map)
 import Data.Map as M
@@ -35,7 +36,9 @@ main = do
     res6 = fromMaybe "" $ getTim testMap
 
     res7 = testMap # fromMaybe "" <<< getTim <<< updateTim (\t -> t <> " is awesome! ")
-  traverse_ log [ res, res2, res3, res4, res6, res7 ]
+
+    res8 = show $ over traversed (\x -> show $ x * 2) (range 1 10)
+  traverse_ log [ res, res2, res3, res4, res6, res7, res8 ]
   log $ "age >>> " <> show res5
   pure unit
 
@@ -68,3 +71,6 @@ getTim = view _Tim
 
 updateTim :: forall a. (a -> a) -> Map String a -> Map String a
 updateTim f = over _Tim $ map f
+
+_city :: forall a r. Traversal' (Maybe { city :: Maybe a | r }) a
+_city = _Just <<< prop (SProxy :: SProxy "city") <<< _Just
