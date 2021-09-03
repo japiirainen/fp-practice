@@ -8,7 +8,7 @@
   "dependencies": {
     "daggy": "^1.4.0",
     "folktale": "^2.3.2",
-    "immer": "^7.0.7",
+    "immer": "^9.0.6",
     "immutable": "^4.0.0-rc.12",
     "immutable-ext": "^1.1.5",
     "lodash": "^4.17.19",
